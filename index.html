@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title> the game for a bot </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.17.0/phaser-arcade-physics.js"> </script>
+    <script>
+
+        class mainscene {
+            preload() {
+                this.load.image('player', 'assets/coin.jpg');
+                this.load.image('coin', 'assets/coin.jpg');
+                this.score = 0;
+                let style = {font: '20x consolas', fill: 'white'};
+                this.scoreText = this.add
+
+
+            }
+            create() {
+
+
+            }
+            update() {
+
+
+            }
+        }
+
+
+
+        alert('BOO!!! ' +
+            ' welcome to the game for bots!!!') ;
+
+
+        new phaser.game({
+            width: 701,
+            height: 401,
+            background: orange,
+            scene: mainscene,
+            physics: {default: 'arcade'},
+            parent: 'game'
+        })
+    </script>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
