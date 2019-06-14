@@ -6,8 +6,8 @@
 
         class mainscene {
             preload() {
-                this.load.image('player', 'assets/coin.jpg');
-                this.load.image('coin', 'assets/coin.jpg');
+                this.load.image('player', 'assets/player.jpg');
+                this.load.image('coin', 'assets/omers coin.jpg');
                 this.score = 0;
                 let style = {font: '20x consolas', fill: 'white'};
                 this.scoreText = this.add
@@ -15,11 +15,18 @@
 
             }
             create() {
-
-
+                this.player = this.physics.add.sprite(100, 100, 'player');
+                this.coin = this.physics.add.sprite(300, 200, 'coin')
+                this.arrow= this.input.keyboard.createCursorKeys();
             }
             update() {
-
+                if (this.arrow.right.isDown)
+                    this.player.x += 3; {
+                }
+                if (this.arrow.right.isDown)
+                    this.player.x -= 3; {
+                }
+                if (this.)
 
             }
         }
@@ -30,10 +37,10 @@
             ' welcome to the game for bots!!!') ;
 
 
-        new phaser.game({
+        new Phaser.Game({
             width: 701,
             height: 401,
-            background: orange,
+            background: 'orange',
             scene: mainscene,
             physics: {default: 'arcade'},
             parent: 'game'
@@ -43,23 +50,11 @@
 </head>
 <body>
 
-
-
-
-
-
-
+<div id="game"></div>
 
 
 
 </body>
-
-
-
-
-
-
-
 
 
 
