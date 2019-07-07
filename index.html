@@ -6,36 +6,40 @@
 
         class mainscene {
             preload() {
+                // Load images
                 this.load.image('player', 'assets/player.jpg');
-                this.load.image('coin', 'assets/omers coin.jpg');
+                this.load.image('coin', 'assets/coin.png');
+
                 this.score = 0;
-                let style = {font: '20x consolas', fill: 'white'};
-                this.scoreText = this.add
-
-
+                let style = {font: '20px Consolas', fill: '#fff'};
+                this.scoreText = this.add.text(20, 20, 'Score: ' + this.score, style);
             }
             create() {
+                // Create sprites
                 this.player = this.physics.add.sprite(100, 100, 'player');
-                this.coin = this.physics.add.sprite(300, 200, 'coin')
-                this.arrow= this.input.keyboard.createCursorKeys();
+                this.player.setScale(0.75);
+
+                this.coin = this.physics.add.sprite(300, 200, 'coin');
+                this.coin.setScale(0.1);
+
+                // Monitor keyboard
+                this.arrow = this.input.keyboard.createCursorKeys();
             }
             update() {
-                if (this.arrow.right.isDown)
-                    this.player.x += 3; {
+                if (this.arrow.left.isDown) {
+                    this.player.x -= 3;
                 }
-                if (this.arrow.right.isDown)
-                    this.player.x -= 3; {
+                if (this.arrow.right.isDown) {
+                    this.player.x += 3;
                 }
-                if (this.)
-
+                if (this.arrow.up.isDown) {
+                    this.player.y -= 3;
+                }
+                if (this.arrow.down.isDown) {
+                    this.player.y += 3;
+                }
             }
         }
-
-
-
-        alert('BOO!!! ' +
-            ' welcome to the game for bots!!!') ;
-
 
         new Phaser.Game({
             width: 701,
@@ -52,10 +56,5 @@
 
 <div id="game"></div>
 
-
-
 </body>
-
-
-
 </html>
